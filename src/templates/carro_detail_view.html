@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+  <head>
+    {% load static %}
+    
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static 'style-cars.css'%}">
+
+  </head>
+
+  <div class="header">
+    <a href="#default" class="logo"><h2>JDM <em>Motors!</em></h2></a>
+    <div class="header-right">
+      <a class="link-header" href="/home">Home</a>
+      <a class="link-header" href="/meus_carros">Meus Carros</a>
+      <a class="link-header" href="/home">Comprar</a>
+      <a class="link-header" href="/vender">Vender</a>
+      <a class="link-header" href="/login">Login</a>
+      <a class="link-header" href="/logout">Logout</a>
+  
+    </div>
+  </div>
+    <body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <div class="banner">
+                <div>
+                    <div>
+                        <div>
+                            <h4 id="destaque1">{{Marca}} {{Modelo}}</h4>
+                        </div>
+                        <img src="{{ Img_url }}" class="img-fluid">
+                    </div>
+                    <h6> R$ {{Preco}} </h6>
+                </div>
+                <table>
+
+                    <tr> 
+                       <th> ID  </th>
+                       <th> Marca  </th>
+                       <th> Modelo  </th>
+                       <th> Motor  </th>
+                       <th> Ano  </th>
+                       <th> Câmbio  </th>
+                       <th> Combustível  </th>
+                       <th> Km  </th>
+                    </tr>
+                    
+                    <tr>
+                    <td>{{ID}}</td>
+                    <td>{{Marca}}</td>
+                    <td>{{Modelo}}</td>
+                    <td>{{Motor}}</td>
+                    <td>{{Ano}}</td>
+                    <td>{{Cambio}}</td>
+                    <td>{{Combustivel}}</td>
+                    <td>{{Km}}</td>
+                    </tr>
+
+                </table>
+
+            </div>
+           
+        </div>
+    </div>
+  </body>
+</html>
+{% endblock %}

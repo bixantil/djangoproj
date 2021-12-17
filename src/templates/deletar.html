@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static 'style-deletar.css'%}">
+
+  </head>
+
+  <div class="header">
+    <a href="#default" class="logo"><h2>JDM <em>Motors!</em></h2></a>
+    <div class="header-right">
+      <a class="link-header" href="/home">Home</a>
+      <a class="link-header" href="/meus_carros">Meus Carros</a>
+      <a class="link-header" href="/home">Comprar</a>
+      <a class="link-header" href="/vender">Vender</a>
+      <a class="link-header" href="/login">Login</a>
+      <a class="link-header" href="/logout">Logout</a>
+  
+    </div>
+  </div>
+    <body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <div class="banner">
+          <div>
+            <div>
+              <div>
+                <h4 id="destaque1"> Apague aqui o seu anúncio.</strong></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="formulario">
+            <div class="titulo">
+                <h1>
+                    Digite a DELETAR no campo abaixo para apagar seu anúncio.
+                </h1>
+            </div>
+            <div class="form">
+                <form action = "" method="POST" enctype = "multipart/form-data"> {% csrf_token %}
+            
+                    <br><label for="Modelo"> Para confirmar a ação, envie DELETAR: </label><br>
+                    <input type="text" name="deletar" placeholder="DELETAR">
+                <button class="btn btn-dark my-4" type="submit"> Enviar </button>
+          </form>
+              </div>
+        </div>
+        
+      </div>
+      
+    </div>
+      
+        
+  </body>
+</html>
+{% endblock %}

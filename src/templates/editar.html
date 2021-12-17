@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+  <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{% static 'style-vender.css'%}">
+
+  </head>
+
+  <div class="header">
+    <a href="#default" class="logo"><h2>JDM <em>Motors!</em></h2></a>
+    <div class="header-right">
+      <a class="link-header" href="/home">Home</a>
+      <a class="link-header" href="/meus_carros">Meus Carros</a>
+      <a class="link-header" href="/home">Comprar</a>
+      <a class="link-header" href="/vender">Vender</a>
+      <a class="link-header" href="/login">Login</a>
+      <a class="link-header" href="/logout">Logout</a>
+  
+    </div>
+  </div>
+    <body>
+    <div id="page-container">
+      <div id="content-wrap">
+        <div class="banner">
+          <div>
+            <div>
+              <div>
+                <h4 id="destaque1"> Tem que se desfazer do seu brinquedo? <strong> Anuncie ele aqui e venda mais rápido que um ninja!</strong></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="formulario">
+            <div class="titulo">
+                <h1>
+                    Preencha as informações da sua nave e ponha para venda em instantes
+                </h1>
+            </div>
+            <div class="form">
+                <form action = "" method="POST" enctype = "multipart/form-data"> {% csrf_token %}
+                    <label for="Marca"> Selecione o fabricante</label><br>
+                    <select id="Marca" name="Marca">
+                        <option value="default">Selecione</option>
+                        <option value="acura">Acura</option>
+                        <option value="honda">Honda</option>
+                        <option value="lexus">Lexus</option>
+                        <option value="mazda">Mazda</option>
+                        <option value="mitusbishi">Mitusbishi</option>
+                        <option value="nissan">Nissan</option>
+                        <option value="toyota">Toyota</option>
+                    </select>
+            
+                    <br><label for="Modelo"> Digite aqui o modelo:</label><br>
+                    <input type="text" name="Modelo" placeholder="Skyline GT-R R34">
+            
+                    <br><label for="Motor"> Motor </label><br>
+                    <input type="text" name="Motor" placeholder="3.0 biturbo">
+            
+                    <br><label for="Ano"> Ano </label><br>
+                    <input type="number" name="Ano" placeholder="2021">
+    
+                    <br><label for="Cambio"> Câmbio </label><br>
+                    <input type="text" name="Cambio" placeholder="manual">
+    
+                    <br><label for="Combustivel"> Combustível </label><br>
+                    <input type="text" name="Combustivel" placeholder="flex / gasolina / etanol">
+                    
+                    <br><label for="Km">Quilometragem</label><br>
+                    <input type="number" name="Km" placeholder="20000">
+
+                    <br><label for="Preco">Preço</label><br>
+                    <input type="number" name="Preco" placeholder="150000">
+            
+
+            
+            
+
+                <h2 class="my-4"> Adicione a imagem aqui</h2>
+
+                <input type="file" name="upload" accept="image/*">
+                <br>
+                <button class="btn btn-dark my-4" type="submit"> Enviar </button>
+          </form>
+              </div>
+        </div>
+        
+      </div>
+      
+    </div>
+      
+        
+  </body>
+</html>
+{% endblock %}
